@@ -1,28 +1,43 @@
-// Accept the Number froam use and Print that number of * on Dispaly
 
 #include<stdio.h>
 
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   :   Display
+//  Description     :   Used to print number of star given by user
+//  Input           :   Integer
+//  Output          :   *
+//  Author          :   Vivek Bhauraj Gautam
+//  Date            :   17/10/2025
+//
+////////////////////////////////////////////////////////////////////////
+
 void Display(int iNo)
 {
-
-    if(iNo < 0)
+    if(iNo<0)
     {
         iNo = -iNo;
     }
 
     while(iNo > 0)
     {
-        printf("%d\t*\n",iNo);
+        printf("*");
         iNo--;
     }
 }
 
-int main()
-{
-    int iValue = 0;
+////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function : Main
+//
+////////////////////////////////////////////////////////////////////////
 
-    printf("Enter the Value :\n");
-    scanf("%d",&iValue);
+int main()
+{   
+    int iValue = 0;
+    
+    printf("Enter number : ");
+    scanf("%d", &iValue);
 
     Display(iValue);
 
