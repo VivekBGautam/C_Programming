@@ -1,35 +1,55 @@
-// Accept two Number from user and Display first number in Second number of time
 
-#include<stdio.h>
+#include <stdio.h>
 
-void Display(int iNo1,int iNo2)
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   :   Display
+//  Description     :   Used to display the same number multiple time provided by user
+//  Input           :   Integer, Integer
+//  Output          :   Integer, Integer, Integer, .....
+//  Author          :   Vivek Bhauraj Gautam
+//  Date            :   17/10/2025
+//
+////////////////////////////////////////////////////////////////////////
+
+void Display(int iNo, int iFrequency)
 {
-
     int iCnt = 0;
 
-    if(iNo2 < 0)
+    if(iNo < 0)
     {
-        iNo2 = -iNo2;
+        iNo = -iNo;
     }
 
-    for(iCnt = 1; iCnt <= iNo2; iCnt++)
+    if(iFrequency < 0)
     {
-        printf("%d\n",iNo1);
+        iFrequency = -iFrequency;
+    }
+
+    for(iCnt = 1; iCnt <= iFrequency; iCnt++)
+    {
+        printf("%d\t", iNo);
     }
 }
 
+////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function : Main
+//
+////////////////////////////////////////////////////////////////////////
+
 int main()
-{
-    int iValue1 = 0;
-    int iValue2 = 0;
+{   
+    int iValue = 0;
+    int iCount = 0;
 
-    printf("Enter the first Value :\n");
-    scanf("%d",&iValue1);
+    printf("Enter number : ");
+    scanf("%d", &iValue);
 
-    printf("Enter the second Value :\n");
-    scanf("%d",&iValue2);
+    printf("Enter number : ");
+    scanf("%d", &iCount);
 
-    Display(iValue1, iValue2);
+    Display(iValue,iCount);
 
     return 0;
 }
