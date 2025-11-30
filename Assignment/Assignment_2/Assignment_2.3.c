@@ -1,10 +1,19 @@
-// Accept the Number from user and if Number is less than 10 print "Hello" Otherwise print "Demo"
 
-#include<stdio.h>
+#include <stdio.h>
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   :   Display
+//  Description     :   Used to Display string based of condition
+//  Input           :   Integer
+//  Output          :   String
+//  Author          :   Vivek Bhauraj Gautam
+//  Date            :   17/10/2025
+//
+////////////////////////////////////////////////////////////////////////
 
 void Display(int iNo)
 {
-
     if(iNo < 10)
     {
         printf("Hello");
@@ -13,15 +22,20 @@ void Display(int iNo)
     {
         printf("Demo");
     }
-
 }
 
+////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function : Main
+//
+////////////////////////////////////////////////////////////////////////
+
 int main()
-{
+{   
     int iValue = 0;
 
-    printf("Enter the Value :\n");
-    scanf("%d",&iValue);
+    printf("Enter number : ");
+    scanf("%d", &iValue);
 
     Display(iValue);
 
