@@ -1,26 +1,45 @@
-// Accept the Number froam use and Print that number of * on Dispaly
 
 #include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   :   Display
+//  Description     :   Used to prime number of stars given by user
+//  Input           :   Integer
+//  Output          :   *
+//  Author          :   Vivek Bhauraj Gautam
+//  Date            :   17/10/2025
+//
+////////////////////////////////////////////////////////////////////////
 
 void Display(int iNo)
 {
     int iCnt = 0;
 
-    iCnt = 1;
-
-    while(iCnt <= iNo)
+    if(iNo<0)
     {
-        printf("*\n");
+        iNo = -iNo;
+    }
+
+    while (iCnt < iNo)
+    {
+        printf("*");
         iCnt++;
     }
 }
 
+////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function : Main
+//
+////////////////////////////////////////////////////////////////////////
+
 int main()
-{
+{  
     int iValue = 0;
 
-    printf("Enter the Value :\n");
-    scanf("%d",&iValue);
+    printf("Enter number : ");
+    scanf("%d", &iValue);
 
     Display(iValue);
 
