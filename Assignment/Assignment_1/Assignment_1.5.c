@@ -1,27 +1,47 @@
-// Accept Number from user and print that number of * on Display
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////////
 
 #include<stdio.h>
-#include<stdbool.h>
 
-void PrintStar(int iNo)
+////////////////////////////////////////////////////////////////////////
+//  
+//  Function Name   :   Accept
+//  Description     :   Used to display number of * after taking input from user
+//  Input           :   Integer
+//  output          :   Symbol
+//  Author          :   Vivek Bhauraj Gautam
+//  Date            :   17/10/2025
+//
+////////////////////////////////////////////////////////////////////////
+
+void Accept(int iNo)
 {
-   int iCnt = 0;
+    int iCnt = 0;
 
-   for(iCnt = 1; iCnt <= iNo; iCnt++)
-   {
-        printf("*\n");
-   }
+    for(iCnt = 1; iCnt <= iNo; iCnt++)
+    {
+        printf("*");
+    }
 }
+
+////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function : Main
+//
+////////////////////////////////////////////////////////////////////////
 
 int main()
 {
     int iValue = 0;
-    bool bRet = false;
 
-    printf("Enter the Number :\n");
-    scanf("%d",&iValue);
+    printf("Enter number :");
+    scanf("%d", &iValue);
 
-    PrintStar(iValue);
+    Accept(iValue);
 
     return 0;
 }
