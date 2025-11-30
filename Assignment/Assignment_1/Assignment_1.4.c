@@ -1,11 +1,25 @@
-// Accept Number from user and check wether the nUnmnber is divisible by 5 or Not
 
-#include<stdio.h>
-#include<stdbool.h>
+////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////////
 
+#include <stdio.h>
+#include <stdbool.h>
 
+////////////////////////////////////////////////////////////////////////
+//  
+//  Function Name   :   Check
+//  Description     :   Used to Check given number is divisible by 5 or not
+//  Input           :   Integer
+//  output          :   String
+//  Author          :   Vivek Bhauraj Gautam
+//  Date            :   17/10/2025
+//
+////////////////////////////////////////////////////////////////////////
 
-bool CheckDivisible(int iNo)
+bool Check(int iNo)
 {
     if((iNo % 5) == 0)
     {
@@ -17,23 +31,29 @@ bool CheckDivisible(int iNo)
     }
 }
 
+////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function : Main
+//
+////////////////////////////////////////////////////////////////////////
+
 int main()
 {
     int iValue = 0;
     bool bRet = false;
 
-    printf("Enter the Number :\n");
-    scanf("%d",&iValue);
+    printf("Enter Number : ");
+    scanf("%d", &iValue);
 
-    bRet = CheckDivisible(iValue);
+    bRet = Check(iValue);
 
-    if(bRet == true )
+    if(bRet == true)
     {
-        printf("%d is Divisible by 5 \n",iValue);
+        printf("Number is Divisible by 5");
     }
     else
     {
-        printf("%d is Not  Divisible by 5 \n",iValue);
+        printf("Number is not Divisible by 5");
     }
 
     return 0;
