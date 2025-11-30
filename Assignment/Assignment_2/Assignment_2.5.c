@@ -1,11 +1,20 @@
-// Accept the Number from user and Check wether the number is even or odd
-
 #include<stdio.h>
 #include<stdbool.h>
 
-bool CheckEvenOdd(int iNo)
+////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   :   CheckEven
+//  Description     :   Used to Check the number is even or not
+//  Input           :   Integer
+//  Output          :   String
+//  Author          :   Vivek Bhauraj Gautam
+//  Date            :   17/10/2025
+//
+////////////////////////////////////////////////////////////////////////
+
+bool CheckEven(int iNo)
 {
-    if((iNo % 2) == 0)
+    if((iNo % 2)==0)
     {
         return true;
     }
@@ -15,23 +24,29 @@ bool CheckEvenOdd(int iNo)
     }
 }
 
+////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function : Main
+//
+////////////////////////////////////////////////////////////////////////
+
 int main()
 {
     int iValue = 0;
     bool bRet = false;
 
-    printf("Enter the Value :\n");
+    printf("Enter number : ");
     scanf("%d",&iValue);
 
-    bRet = CheckEvenOdd(iValue);
-
-     if(bRet == true)
+    bRet = CheckEven(iValue);
+    
+    if(bRet == true)
     {
-        printf("%d is EVEN Number ",iValue);
+        printf("%d is Even number\n",iValue);
     }
-    else 
+    else
     {
-        printf("%d is ODD Number ",iValue);
+        printf("%d is Odd number\n", iValue);
     }
 
     return 0;
