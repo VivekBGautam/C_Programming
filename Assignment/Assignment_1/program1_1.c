@@ -1,10 +1,15 @@
 // Program to Divide two Numbers
 
+////////////////////////////////////////////////////////////////////////
+//
+//  Required Header files
+//
+////////////////////////////////////////////////////////////////////////
+
 #include<stdio.h>
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  Class Name      :   Demo
 //  Function Name   :   Divide
 //  Description     :   Used to perform Division of two number
 //  Input           :   Integer, Integer
@@ -43,4 +48,5 @@ int main()
     printf("Division is : %d \n",iRet);
 
     return 0;
+
 }
